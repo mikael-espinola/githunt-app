@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.js": "/githunt-app/static/js/main.75f20c20.js",
+    "static/media/errVisual.png": "/githunt-app/static/media/errVisual.2af47ebbb17eaa11f2d4.png",
+    "index.html": "/githunt-app/index.html",
+    "main.75f20c20.js.map": "/githunt-app/static/js/main.75f20c20.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.75f20c20.js"
+  ]
+}

@@ -2,8 +2,6 @@ import React from "react";
 
 import * as s from "./style";
 
-import Image from "../../assets/images/me-cut-profile.png";
-
 function Menu({ profile }) {
   return (
     <s.Container>

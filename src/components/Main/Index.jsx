@@ -13,7 +13,7 @@ function Main({ userSearch }) {
   const [loaderStatus, setLoaderStatus] = useState(false);
   const [ErrScreen, setErrScreen] = useState(false);
 
-  const apiKey = process.env.REACT_APP_API_GITHUB_KEY;
+  const apiKey = process.env.REACT_APP_GITHUB_KEY;
 
   useEffect(() => {
     setErrScreen(false);

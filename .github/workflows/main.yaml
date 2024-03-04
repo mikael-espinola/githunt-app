@@ -1,32 +1,36 @@
-# Created by MichaelCurrin
-# https://gist.github.com/MichaelCurrin/a698731096f78240f653faf9a9127cba
-
-name: Build and deploy 
+name: Build and Deploy
 
 on:
   push:
     branches:
-      - main
+      - main,
+      - gh-pages
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      REACT_APP_API_GITHUB_KEY: ${{ secrets.REACT_APP_API_GITHUB_KEY}}
+
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@master
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          persist-credentials: false
+          node-version: 14
 
-      - name: Install 🔧
-        run: yarn install
+      - name: Install Dependencies
+        run: npm install
 
-      - name: Build 🏗️
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
         run: |
-          yarn clean
-          yarn build
-      - name: Deploy to GH Pages 🚀
-        uses: peaceiris/actions-gh-pages@v3
-        with:
+          # Add your deployment commands here
+          echo "Deploying with API key: $REACT_APP_API_KEY"
+          env:
           REACT_APP_API_GITHUB_KEY: ${{ secrets.REACT_APP_API_GITHUB_KEY}}
-          publish_dir: public

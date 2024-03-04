@@ -13,8 +13,6 @@ function Main({ userSearch }) {
   const [loaderStatus, setLoaderStatus] = useState(false);
   const [ErrScreen, setErrScreen] = useState(false);
 
-  const apiKey = process.env.REACT_APP_GITHUB_KEY;
-
   useEffect(() => {
     setErrScreen(false);
     setStatusApi(false);
@@ -25,7 +23,7 @@ function Main({ userSearch }) {
     fetch(`https://api.github.com/users/${userSearch}`, {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${process.env.REACT_APP_GITHUB_KEY}`,
       },
     })
       .then((resp) => {
@@ -41,7 +39,7 @@ function Main({ userSearch }) {
         fetch(data.repos_url, {
           method: "GET",
           headers: {
-            Authorization: `Bearer ${apiKey}`,
+            Authorization: `Bearer ${process.env.REACT_APP_GITHUB_KEY}`,
           },
         })
           .then((resp) => resp.json())

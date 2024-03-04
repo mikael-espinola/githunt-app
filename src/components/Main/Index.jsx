@@ -23,7 +23,7 @@ function Main({ userSearch }) {
     fetch(`https://api.github.com/users/${userSearch}`, {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_GITHUB_KEY}`,
+        Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN_API}`,
       },
     })
       .then((resp) => {
@@ -39,7 +39,7 @@ function Main({ userSearch }) {
         fetch(data.repos_url, {
           method: "GET",
           headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_GITHUB_KEY}`,
+            Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN_API}`,
           },
         })
           .then((resp) => resp.json())

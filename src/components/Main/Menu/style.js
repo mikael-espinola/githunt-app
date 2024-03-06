@@ -7,7 +7,7 @@ export const Container = styled.aside`
   padding: 0.3em;
 
   @media screen and (min-width: 750px) {
-    width: 70%;
+    width: 30%;
     border: none;
   }
 `;

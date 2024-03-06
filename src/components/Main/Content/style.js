@@ -6,7 +6,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0.3em;
+
+  @media screen and (min-width: 750px) {
+    width: 50%;
+  }
 `;
+
 export const RepositoriesList = styled.ul``;
 export const RepositoryItem = styled.li`
   border: 1px solid black;
@@ -18,13 +23,12 @@ export const Name = styled.h2`
 `;
 export const Description = styled.p`
   font-size: 14px;
-  padding: 0.2em;
+  padding: 0.3em;
 `;
 
 export const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  cursor: pointer;
   padding: 0.5em;
 `;

@@ -12,9 +12,7 @@ function Button({ type, link }) {
           </a>
         </s.Button>
       ) : (
-        <s.Button>
-          <p>{type}</p>
-        </s.Button>
+        <s.Button>{type}</s.Button>
       )}
     </>
   );

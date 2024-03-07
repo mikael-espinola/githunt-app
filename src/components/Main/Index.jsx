@@ -22,9 +22,6 @@ function Main({ userSearch }) {
     setLoaderStatus(true);
     fetch(`https://api.github.com/users/${userSearch}`, {
       method: "GET",
-      headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN_API}`,
-      },
     })
       .then((resp) => {
         if (!resp.ok) {
@@ -38,9 +35,6 @@ function Main({ userSearch }) {
       .then((data) => {
         fetch(data.repos_url, {
           method: "GET",
-          headers: {
-            Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN_API}`,
-          },
         })
           .then((resp) => resp.json())
           .then((repo) => {

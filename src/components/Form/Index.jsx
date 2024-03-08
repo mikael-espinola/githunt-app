@@ -23,10 +23,9 @@ function Form({ setUserSearch, userSearch }) {
         <s.Input
           type="search"
           onChange={getParam}
-          placeholder="Enter the user here..."
+          placeholder="Enter the username here..."
           value={param}
         />
-        <Button type={"search"} />
       </s.Form>
     </>
   );

@@ -3,11 +3,11 @@ import Form from "../Form/Index";
 
 import * as s from "./style";
 
-function Header({ setUserSearch }) {
+function Header({ setUserSearch, userSearch }) {
   return (
     <s.Container>
       <s.Title>GitHunt</s.Title>
-      <Form setUserSearch={setUserSearch} />
+      <Form userSearch={userSearch} setUserSearch={setUserSearch} />
     </s.Container>
   );
 }

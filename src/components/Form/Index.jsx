@@ -2,27 +2,29 @@ import React, { useState } from "react";
 
 import * as s from "./style";
 import Button from "./Button/Index";
+import useDebounce from "../Hooks/useDebounce";
 
-function Form({ setUserSearch }) {
-  const [param, setParam] = useState();
+function Form({ setUserSearch, userSearch }) {
+  const [param, setParam] = useState(userSearch);
+
+  const debounceChange = useDebounce((param) => {
+    setUserSearch(param);
+  }, 400);
 
   const getParam = (e) => {
-    e.preventDefault();
-    let text = e.target.value;
+    const text = e.target.value;
     setParam(text);
-  };
-
-  const sendParam = (e) => {
-    e.preventDefault();
-    param && setUserSearch(param);
+    debounceChange(text);
   };
 
   return (
     <>
-      <s.Form onSubmit={sendParam}>
+      <s.Form>
         <s.Input
-          onChange={(e) => getParam(e)}
+          type="search"
+          onChange={getParam}
           placeholder="Enter the user here..."
+          value={param}
         />
         <Button type={"search"} />
       </s.Form>

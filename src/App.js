@@ -4,10 +4,10 @@ import Header from "./components/Header/Index";
 import Main from "./components/Main/Index";
 
 function App() {
-  const [userSearch, setUserSearch] = useState();
+  const [userSearch, setUserSearch] = useState("");
   return (
     <div>
-      <Header setUserSearch={setUserSearch} />
+      <Header userSearch={userSearch} setUserSearch={setUserSearch} />
       <Main userSearch={userSearch} />
       <GlobalStyles />
     </div>

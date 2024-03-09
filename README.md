@@ -19,8 +19,9 @@ The best place to identify GitHub profiles. Search in it!
     -- User can enter a username;
     -- User can see the result after typing the username due to JS debounce application;
     -- User can see the avatar, username, followers and repository count of searched user;
+    -- User can see the top 8 repositories of searched user;
     -- User should get an alert if the username is not valid.
 
 ## Next Features
 
-    -- User can see the top 4 repositories of searched user;
+    -- New layout / design

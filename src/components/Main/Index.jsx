@@ -13,6 +13,20 @@ function Main({ userSearch }) {
   const [loaderStatus, setLoaderStatus] = useState(false);
   const [ErrScreen, setErrScreen] = useState(false);
 
+  const sortRepo = (data) => {
+    return data.sort((a, b) => {
+      const createAtA = new Date(a.created_at);
+      const createAtB = new Date(b.created_at);
+
+      const currentDate = new Date();
+
+      const differenceDateA = currentDate - createAtA;
+      const differenceDateB = currentDate - createAtB;
+
+      return differenceDateA - differenceDateB;
+    });
+  };
+
   useEffect(() => {
     setErrScreen(false);
     setStatusApi(false);
@@ -38,7 +52,8 @@ function Main({ userSearch }) {
         })
           .then((resp) => resp.json())
           .then((repo) => {
-            const arr = repo.slice(0, 6);
+            const arrSorted = sortRepo(repo);
+            const arr = arrSorted.slice(0, 8);
             setRepositories(arr);
             setProfile(data);
             setStatusApi(true);

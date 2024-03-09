@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/githunt-app/static/js/main.b30fd7c6.js",
+    "main.js": "/githunt-app/static/js/main.e5869325.js",
     "static/media/errVisual.png": "/githunt-app/static/media/errVisual.2af47ebbb17eaa11f2d4.png",
     "index.html": "/githunt-app/index.html",
-    "main.b30fd7c6.js.map": "/githunt-app/static/js/main.b30fd7c6.js.map"
+    "main.e5869325.js.map": "/githunt-app/static/js/main.e5869325.js.map"
   },
   "entrypoints": [
-    "static/js/main.b30fd7c6.js"
+    "static/js/main.e5869325.js"
   ]
 }

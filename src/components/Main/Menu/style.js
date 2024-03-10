@@ -37,7 +37,7 @@ export const Nickname = styled.h4`
   > a {
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: ${(props) => props.theme.fontColor};
     &:hover {
       color: blue;
     }

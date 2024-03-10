@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const RepositoriesList = styled.ul``;
 export const RepositoryItem = styled.li`
-  border: 1px solid black;
+  border: ${(props) => props.theme.border};
   border-radius: 5px;
   margin-bottom: 1em;
 `;

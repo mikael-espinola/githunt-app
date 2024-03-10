@@ -22,7 +22,7 @@ function Menu({ profile }) {
           <h5>Followers:</h5> <p>{profile.followers}</p>
         </s.DetailsItem>
         <s.DetailsItem>
-          <h5>Repositories:</h5> <p>{profile.followers}</p>
+          <h5>Repositories:</h5> <p>{profile.public_repos}</p>
         </s.DetailsItem>
         <s.DetailsItem>
           <h5>{profile.location}</h5>

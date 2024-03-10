@@ -53,7 +53,8 @@ function Main({ userSearch }) {
           .then((resp) => resp.json())
           .then((repo) => {
             const arrSorted = sortRepo(repo);
-            const arr = arrSorted.slice(0, 8);
+            console.log(data);
+            const arr = arrSorted.slice(0, 4);
             setRepositories(arr);
             setProfile(data);
             setStatusApi(true);

@@ -11,7 +11,16 @@ function Menu({ profile }) {
         </s.ImageContainer>
         <s.NameContainer>
           <s.Name>{profile.name}</s.Name>
-          <s.Nickname>{profile.login}</s.Nickname>
+          <s.Nickname>
+            GitHub:{" "}
+            <a
+              href={profile.html_url}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {profile.login}
+            </a>
+          </s.Nickname>
         </s.NameContainer>
       </s.Profile>
       <s.DetailsList>

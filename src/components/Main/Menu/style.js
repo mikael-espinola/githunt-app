@@ -34,9 +34,13 @@ export const NameContainer = styled.div`
 export const Name = styled.h1``;
 export const Nickname = styled.h4`
   display: inline-block;
-  cursor: pointer;
-  &:hover {
-    color: blue;
+  > a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: blue;
+    }
   }
 `;
 

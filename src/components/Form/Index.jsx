@@ -9,7 +9,7 @@ function Form({ setUserSearch, userSearch }) {
 
   const debounceChange = useDebounce((param) => {
     setUserSearch(param);
-  }, 400);
+  }, 200);
 
   const getParam = (e) => {
     const text = e.target.value;
